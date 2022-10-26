@@ -12,6 +12,8 @@ public class DesktopLauncher {
 		config.setForegroundFPS(60);
 		config.setTitle("My GDX First Game");
 		config.setWindowedMode(800,600);
+		config.setAudioConfig(32,512,9);
+//		только для sound первая цифра - максимум количества звуков воспроизводимых одновременно //
 		new Lwjgl3Application(new MyGdxGame(), config);
 
 	}
