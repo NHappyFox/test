@@ -14,7 +14,15 @@ public class MyAnimation {
         redcapImg = new Texture(name);
         TextureRegion reg1 = new TextureRegion(redcapImg);
         TextureRegion[][] regions = reg1.split(redcapImg.getWidth()/col, redcapImg.getHeight()/row);
-        anm = new Animation<>(1/fps,regions[0]);
+
+        int cnt=0;
+
+        TextureRegion[] tmp = new TextureRegion[0];
+        for (TextureRegion[] region: regions) {
+            for (TextureRegion reg: region) tmp[cnt++]=reg;
+        }
+
+        anm = new Animation<>(1/fps,tmp);
         anm.setPlayMode(playMode);
     }
 

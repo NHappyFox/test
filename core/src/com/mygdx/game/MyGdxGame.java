@@ -14,7 +14,7 @@ public class MyGdxGame extends ApplicationAdapter {
 	private SpriteBatch batch;
 	private Texture img,redcapImg;
 
-	private MyAnimation anim;
+	private MyAtlasAnim anim;
 	private Music music;
 	private Sound sound;
 	MyInputProcessor myInputProcessor;
@@ -39,7 +39,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
 		redcapImg = new Texture("SeekPng.com_red-hood-png_1195165(1).png");
-		anim = new MyAnimation("SeekPng.com_red-hood-png_1195165(1).png",1,3,15, Animation.PlayMode.LOOP);
+		anim = new MyAtlasAnim("atlas/unnamed.atlas","red_cap",5, Animation.PlayMode.LOOP);
 	}
 
 	@Override
